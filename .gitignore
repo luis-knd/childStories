@@ -1,0 +1,15 @@
+node_modules/
+.idea/
+.expo/
+dist/
+/android/
+/ios/
+/.android-signing/
+/artifacts/
+*.jks
+*.keystore
+*.log
+.env*
+!.env.example
+
+docs/plans/*

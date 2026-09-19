@@ -1,0 +1,45 @@
+{
+  "name": "el-jardin-secreto",
+  "version": "1.2.2",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "export": "expo export --platform android",
+    "doctor": "npx expo-doctor@latest",
+    "build:apk": "./scripts/build-apk.sh",
+    "build:apk:cloud": "npx eas-cli build --platform android --profile preview",
+    "build:apk:dry-run": "bash ./scripts/build-android.sh --dry-run",
+    "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
+    "worker:check": "wrangler deploy --dry-run --config worker/wrangler.jsonc",
+    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc"
+  },
+  "dependencies": {
+    "@expo-google-fonts/caveat": "^0.4.0",
+    "@expo-google-fonts/dancing-script": "^0.4.0",
+    "@expo-google-fonts/marck-script": "^0.4.0",
+    "@expo-google-fonts/quicksand": "^0.4.0",
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "expo": "^57.0.9",
+    "expo-font": "~57.0.1",
+    "expo-speech": "~57.0.1",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "tracery-grammar": "^2.8.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260915.1",
+    "@types/react": "~19.2.2",
+    "@types/react-test-renderer": "^19.3.0",
+    "react-test-renderer": "^19.2.3",
+    "typescript": "~6.0.3",
+    "vitest": "^4.0.0",
+    "wrangler": "^4.131.2"
+  }
+}

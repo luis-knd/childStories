@@ -1,0 +1,9 @@
+.android-signing
+.expo
+.git
+android
+artifacts
+dist
+ios
+node_modules
+*.log

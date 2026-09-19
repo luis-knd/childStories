@@ -1,0 +1,24 @@
+name: child-stories
+
+services:
+  android-builder:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: docker/android/Dockerfile
+    environment:
+      PROJECT_ROOT: /workspace
+      OUTPUT_DIR: /output
+      ANDROID_SIGNING_DIR: /signing
+    volumes:
+      - .:/workspace
+      - node-modules:/workspace/node_modules
+      - npm-cache:/npm-cache
+      - gradle-cache:/gradle-cache
+      - ./artifacts:/output
+      - ./.android-signing:/signing
+
+volumes:
+  node-modules:
+  npm-cache:
+  gradle-cache:
